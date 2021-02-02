@@ -1,0 +1,49 @@
+<h2>Wellcome, {{ player.name }}!</h2>
+
+<table border="1">
+  <caption>Stats of player</caption>
+  <thead>
+    <tr>
+      <th>Level</th>
+      <th>ATK</th>
+      <th>DEF</th>
+      <th>Health</th>
+      <th>Energy</th>
+      <th>XP</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>{{ player.level }}</td>
+      <td>{{ player.attackPower }}</td>
+      <td>{{ player.deffencePower }}</td>
+      <td>{{ player.health }} / {{ player.maxHealth }}</td>
+      <td>{{ player.energy }}</td>
+      <td>{{ player.experience }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>What do you wanna do?</h3>
+
+<hr />
+
+<ul>
+  <li>
+    <button (click)="battle();">Battle with a Bat!</button>
+  </li>
+  <li>
+    <button (click)="recover();">Recover life!</button>
+  </li>
+  <li>
+    <button>Nah, I'm ok.</button>
+  </li>
+</ul>
+
+<hr />
+
+<h3>Battle log</h3>
+<ul>
+  <li *ngFor="let item of battleService.battleLog">{{ item }}</li>
+</ul>

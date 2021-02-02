@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { PlayerService } from './services/player/player.service';
+import { Player } from './models/player';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ng-text-rpg';
+  
 }

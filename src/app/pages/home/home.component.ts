@@ -20,18 +20,10 @@ export class HomeComponent implements OnInit {
   player: Player;
 
   ngOnInit(): void {
-    this.player = this.playerService.getplayer();
-
-    if(this.player == null) {
-      this.router.navigate(['/create-player']);
-    }
-
-    setInterval(() => {
-      if(this.player.energy < this.player.maxEnergy) {
-        this.player.energy += 1;
-        this.playerService.setPlayer(this.player);
-      }
-    }, 1000);
+    this.playerService.getPlayerObservable()
+    .subscribe(item => {
+      this.player = item;
+    });
   }
 
   battle() {

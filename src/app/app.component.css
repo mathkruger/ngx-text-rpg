@@ -1,0 +1,10 @@
+h2 {
+    text-align: center;
+}
+
+.player-stats {
+    width: 100%;
+    text-align: center;
+    border: 1px solid var(--color-secondary);
+    border-collapse: collapse;
+}

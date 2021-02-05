@@ -1,30 +1,39 @@
 <div class="container">
-    <h2>Wellcome, {{ player.name }}!</h2>
+    <ng-container *ngIf="player; else newPLayer">
+        <h2>Wellcome, {{ player.name }}!</h2>
 
-    <table class="player-stats">
-        <caption>Stats of player</caption>
-        <thead>
-            <tr>
-                <th>Level</th>
-                <th>ATK</th>
-                <th>DEF</th>
-                <th>Health</th>
-                <th>Energy</th>
-                <th>XP</th>
-            </tr>
-        </thead>
+        <table class="player-stats">
+            <caption>Stats of player</caption>
+            <thead>
+                <tr>
+                    <th>Level</th>
+                    <th>ATK</th>
+                    <th>DEF</th>
+                    <th>Health</th>
+                    <th>Energy</th>
+                    <th>XP</th>
+                </tr>
+            </thead>
 
-        <tbody>
-            <tr>
-                <td>{{ player.level }}</td>
-                <td>{{ player.attackPower }}</td>
-                <td>{{ player.deffencePower }}</td>
-                <td>{{ player.health }} / {{ player.maxHealth }}</td>
-                <td>{{ player.energy }}</td>
-                <td>{{ player.experience }}</td>
-            </tr>
-        </tbody>
-    </table>
-    
-    <router-outlet></router-outlet>
+            <tbody>
+                <tr>
+                    <td>{{ player.level }}</td>
+                    <td>{{ player.attackPower }}</td>
+                    <td>{{ player.deffencePower }}</td>
+                    <td>{{ player.health }} / {{ player.maxHealth }}</td>
+                    <td>{{ player.energy }}</td>
+                    <td>{{ player.experience }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </ng-container>
+
+    <ng-template #newPLayer>
+        <h2>Wellcome, Stranger!</h2>
+    </ng-template>
+
+
+    <div class="container-route">
+        <router-outlet></router-outlet>
+    </div>
 </div>

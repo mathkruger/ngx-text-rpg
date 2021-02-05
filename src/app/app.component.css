@@ -8,3 +8,9 @@ h2 {
     border: 1px solid var(--color-secondary);
     border-collapse: collapse;
 }
+
+.container-route {
+    padding: 1rem;
+    border: 1px solid var(--color-secondary);
+    margin: .5rem 0;
+}

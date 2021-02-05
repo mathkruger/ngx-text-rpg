@@ -15,7 +15,10 @@ export class CreatePlayerComponent implements OnInit {
   model: Player;
 
   ngOnInit() {
-    this.model = this.playerService.getplayer() || new Player();
+    this.playerService.getPlayerObservable()
+    .subscribe(item => {
+      this.model = item || new Player();
+    });
   }
 
   save() {

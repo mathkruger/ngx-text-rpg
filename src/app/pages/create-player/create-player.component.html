@@ -1,8 +1,10 @@
-<h2>Create/Edit player</h2>
+<h3>Create/Edit player</h3>
 
 <hr />
 
-<input type="text" placeholder="Name" [(ngModel)]="model.name" />
-<input type="text" placeholder="E-mail" [(ngModel)]="model.email" />
+<div class="form-flex">
+    <input class="form-input" type="text" placeholder="Name" [(ngModel)]="model.name" />
+    <input class="form-input" type="text" placeholder="E-mail" [(ngModel)]="model.email" />
 
-<button (click)="save()">Save</button>
+    <button style="margin-top: .5rem;" class="form-button success" (click)="save()">Save</button>
+</div>

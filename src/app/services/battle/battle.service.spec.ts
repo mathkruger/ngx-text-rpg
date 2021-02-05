@@ -21,7 +21,7 @@ describe('Service: Battle', () => {
     player.maxHealth = 100;
     player.level = 1;
 
-    const enemy = new Enemy();
+    const enemy = new Enemy({});
     enemy.name = 'Bat';
     enemy.attackPower = 300;
     enemy.deffencePower = 10;
@@ -44,7 +44,7 @@ describe('Service: Battle', () => {
     player.maxHealth = 250;
     player.level = 1;
 
-    const enemy = new Enemy();
+    const enemy = new Enemy({});
     enemy.name = 'Lion';
     enemy.attackPower = 610;
     enemy.deffencePower = 350;
@@ -67,7 +67,7 @@ describe('Service: Battle', () => {
     player.maxHealth = 250;
     player.level = 1;
 
-    const enemy = new Enemy();
+    const enemy = new Enemy({});
     enemy.name = 'Reverse Matheus';
     enemy.attackPower = 300;
     enemy.deffencePower = 500;
@@ -90,7 +90,7 @@ describe('Service: Battle', () => {
     player.maxHealth = 250;
     player.level = 1;
 
-    const enemy = new Enemy();
+    const enemy = new Enemy({});
     enemy.name = 'Reverse Matheus';
     enemy.attackPower = 300;
     enemy.deffencePower = 500;
@@ -113,7 +113,7 @@ describe('Service: Battle', () => {
     player.maxHealth = 250;
     player.level = 125;
 
-    const enemy = new Enemy();
+    const enemy = new Enemy({});
     enemy.name = 'Reverse Matheus';
     enemy.attackPower = 300;
     enemy.deffencePower = 500;

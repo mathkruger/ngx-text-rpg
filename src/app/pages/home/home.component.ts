@@ -27,29 +27,7 @@ export class HomeComponent implements OnInit {
   }
 
   battle() {
-    if(this.player.energy >= 4) {
-      const bat = new Enemy();
-      bat.name = 'Bat';
-      bat.attackPower = 5;
-      bat.deffencePower = 0;
-      bat.health = 20;
-      bat.maxHealth = 20;
-      bat.level = 1;
-      bat.goldWhenDefeated = 20;
-      bat.xpWhenDefeated = 20;
-  
-      const winner = this.battleService.battle(this.player, bat);
-
-      if(winner == this.player) {
-        this.player.experience += bat.xpWhenDefeated;
-      }
-
-      this.player.energy -= 4;
-      this.playerService.setPlayer(this.player);
-    }
-    else {
-      alert('YOU ARE TIRED, WAIT!!!');
-    }
+    this.router.navigate(['/battle']);
   }
 
   recover() {

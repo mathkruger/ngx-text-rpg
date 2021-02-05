@@ -1,3 +1,4 @@
+import { BattleComponent } from './pages/battle/battle.component';
 import { CreatePlayerComponent } from './pages/create-player/create-player.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -7,6 +8,10 @@ const routes: Routes = [
   {
     path: '',
     component: HomeComponent
+  },
+  {
+    path: 'battle',
+    component: BattleComponent
   },
   {
     path: 'create-player',

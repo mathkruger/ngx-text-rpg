@@ -1,3 +1,4 @@
+import { BattleComponent } from './pages/battle/battle.component';
 import { HomeComponent } from './pages/home/home.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -13,7 +14,8 @@ import { CreatePlayerComponent } from './pages/create-player/create-player.compo
   declarations: [
     AppComponent,
     HomeComponent,
-    CreatePlayerComponent
+    CreatePlayerComponent,
+    BattleComponent
   ],
   imports: [
     CommonModule,

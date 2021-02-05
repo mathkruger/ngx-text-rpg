@@ -1,0 +1,28 @@
+<h3>Choose an enemy</h3>
+
+<ul class="enemy-list">
+  <li [ngClass]="{'selected': selectedEnemy == enemy}" (click)="selectedEnemy = enemy; battle();"
+    *ngFor="let enemy of enemyList">
+    Name: {{ enemy.name }}, Level: {{ enemy.level }}, ATK: {{ enemy.attackPower }}, DEF: {{ enemy.deffencePower }}
+  </li>
+</ul>
+
+<div *ngIf="selectedEnemy != null" class="options-list">
+  <button class="form-button success" [disabled]="repeatBattle" (click)="loopBattle()">
+    ⚔ Repeat battle
+  </button>
+  <button class="form-button error" [disabled]="!repeatBattle" (click)="stopLoop()">
+    🚫 Stop
+  </button>
+</div>
+
+<h3>Battle Log</h3>
+<ul class="battle-log">
+  <ng-container *ngIf="battleService.battleLog.length > 0">
+    <li *ngFor="let log of battleService.battleLog">{{ log }}</li>
+  </ng-container>
+
+  <ng-container *ngIf="battleService.battleLog.length <= 0">
+    <li>No battle log available 😢</li>
+  </ng-container>
+</ul>

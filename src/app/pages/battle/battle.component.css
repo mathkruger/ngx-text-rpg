@@ -1,0 +1,29 @@
+.enemy-list {
+    list-style: none;
+    padding: 0;
+    margin: .5rem 0;
+}
+
+.enemy-list li {
+    margin: .5rem 0;
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    padding: .5rem;
+    cursor: pointer;
+    transition: .2s all;
+}
+
+
+.enemy-list li:hover,
+.enemy-list li.selected {
+    opacity: .6;
+}
+
+.options-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.options-list button {
+    width: 100%;
+}

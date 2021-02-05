@@ -104,15 +104,23 @@ body {
 .form-button {
   border: 0;
   height: 45px;
-  background: var(--color-primary);
   color: var(--color-primary);
+  background: var(--color-secondary);
   border-radius: 0;
+  cursor: pointer;
+}
+
+.form-button:disabled {
+  opacity: .6;
+  cursor: not-allowed;
 }
 
 .form-button.success {
   background: #23fb29;
+  color: #1d1d1d;
 }
 
 .form-button.error {
   background: #fb2323;
+  color: white;
 }
